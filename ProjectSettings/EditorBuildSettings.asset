@@ -5,8 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Candy Ripper/Scenes/Gameplay.unity
+    guid: 0bbc1de445af02a43a00b133579b8609
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: cf600e1c30b6c014f9f453c5558ce280, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 3320c1174689a044ab6dca10511f65a2, type: 2}
+    com.unity.input.settings: {fileID: 11400000, guid: 555b39df2829e5a4e8c1915ff80a3500, type: 2}

@@ -1,6 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using Assets.CandyRipper.NewInputSystem;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
 {
@@ -11,64 +12,75 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
 
         [Header("Movement Settings")]
         [SerializeField] private float _movementSpeed;
-
-        [Header("Jump Information")]
-        [SerializeField] private bool _isGrounded;
         
         [Header("Jump Settings")]
         [SerializeField] private LayerMask _groundLayerMask;
-
         [SerializeField] private float _jumpForce;
 
         [Header("Jump References")]
         [SerializeField] private Transform _groundCheck;
-        
-        private PlayerInput _playerInput;
-        
+
+        private Vector2 _movementAxis;
+
+        private PlayerActionControls _playerActionControls;
+
         private Rigidbody2D _rigidbody2D;
 
         private SpriteRenderer _spriteRenderer;
-
         public bool IsFacingRight => _isFacingRight;
         private void Awake()
         {
-            _playerInput = GetComponent<PlayerInput>();
-
+            _playerActionControls = new PlayerActionControls();
             _rigidbody2D = GetComponent<Rigidbody2D>();
 
             _spriteRenderer = GetComponent<SpriteRenderer>();
         }
+        private void Start()
+        {
+            _playerActionControls.Player.Jump.performed += _ => Jump();
+        }
+        private void OnEnable()
+        {
+            _playerActionControls.Enable();
+        }
         private void Update()
         {
+            ReadMoveAxisValue();
             Move();
             FlipUpdate();
-            GroundUpdate();
+        }
+        private void OnDisable()
+        {
+            _playerActionControls.Disable();
+        }
+        private void ReadMoveAxisValue()
+        {
+            _movementAxis = _playerActionControls.Player.Move.ReadValue<Vector2>();
         }
         private void Move()
         {
-            _rigidbody2D.velocity = new Vector2(_playerInput.Movement.x * _movementSpeed, _rigidbody2D.velocity.y);
+            _rigidbody2D.velocity = new Vector2(_movementAxis.x * _movementSpeed, _rigidbody2D.velocity.y);
         }
-        private void GroundUpdate()
+        private bool IsGrounded()
         {
-            _isGrounded = Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayerMask);
-            Jump(_jumpForce);
+            return Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayerMask);
         }
         private void FlipUpdate()
         {
-            if (Input.GetAxis("Horizontal") > 0 && !_isFacingRight)
+            if (_movementAxis.x > 0 && !_isFacingRight)
             {
                 Flip();
             }
-            else if (Input.GetAxis("Horizontal") < 0 && _isFacingRight)
+            else if (_movementAxis.x < 0 && _isFacingRight)
             {
                 Flip();
             }
         }
-        public void Jump(float jumpForce)
+        public void Jump()
         {
-            if (_isGrounded && _playerInput.IsJumping)
+            if (IsGrounded())
             {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpForce);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _jumpForce);
             }
         }
         private void Flip()

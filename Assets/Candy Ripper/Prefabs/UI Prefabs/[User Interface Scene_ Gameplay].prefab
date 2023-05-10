@@ -297,7 +297,6 @@ GameObject:
   - component: {fileID: 1163618887662330059}
   - component: {fileID: 1163618887662330054}
   - component: {fileID: 1163618887662330057}
-  - component: {fileID: 1163618887662330056}
   m_Layer: 0
   m_Name: Esc Button
   m_TagString: Untagged
@@ -363,19 +362,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1163618887662330056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163618887662330058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ControlPath: <Keyboard>/escape
 --- !u!1 &1163618888004966916
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +495,6 @@ GameObject:
   - component: {fileID: 1163618888228235968}
   - component: {fileID: 1163618888228235999}
   - component: {fileID: 1163618888228235998}
-  - component: {fileID: 1163618888228235969}
   m_Layer: 0
   m_Name: Reload Button
   m_TagString: Untagged
@@ -575,19 +560,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1163618888228235969
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163618888228235971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ControlPath: <Keyboard>/r
 --- !u!1 &1163618888246653655
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,7 +571,6 @@ GameObject:
   - component: {fileID: 1163618888246653652}
   - component: {fileID: 1163618888246653651}
   - component: {fileID: 1163618888246653650}
-  - component: {fileID: 1163618888246653653}
   m_Layer: 0
   m_Name: Jump Button
   m_TagString: Untagged
@@ -665,16 +636,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1163618888246653653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163618888246653655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ControlPath: <Keyboard>/space
