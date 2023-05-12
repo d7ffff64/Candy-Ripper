@@ -1,10 +1,9 @@
 using System;
-using Assets.CandyRipper.NewInputSystem;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
 {
+    [RequireComponent(typeof(PlayerInput), typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
     {
         [Header("Movement Information")]
@@ -20,46 +19,30 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
         [Header("Jump References")]
         [SerializeField] private Transform _groundCheck;
 
-        private Vector2 _movementAxis;
-
-        private PlayerActionControls _playerActionControls;
-
+        private PlayerInput _playerInput;
         private Rigidbody2D _rigidbody2D;
-
-        private SpriteRenderer _spriteRenderer;
         public bool IsFacingRight => _isFacingRight;
         private void Awake()
         {
-            _playerActionControls = new PlayerActionControls();
+            _playerInput = GetComponent<PlayerInput>();
             _rigidbody2D = GetComponent<Rigidbody2D>();
-
-            _spriteRenderer = GetComponent<SpriteRenderer>();
-        }
-        private void Start()
-        {
-            _playerActionControls.Player.Jump.performed += _ => Jump();
         }
         private void OnEnable()
         {
-            _playerActionControls.Enable();
+            _playerInput.OnJumpEvent += Jump;
         }
         private void Update()
         {
-            ReadMoveAxisValue();
             Move();
             FlipUpdate();
         }
         private void OnDisable()
         {
-            _playerActionControls.Disable();
-        }
-        private void ReadMoveAxisValue()
-        {
-            _movementAxis = _playerActionControls.Player.Move.ReadValue<Vector2>();
+            _playerInput.OnJumpEvent -= Jump;
         }
         private void Move()
         {
-            _rigidbody2D.velocity = new Vector2(_movementAxis.x * _movementSpeed, _rigidbody2D.velocity.y);
+            _rigidbody2D.velocity = new Vector2(_playerInput.MovementAxis.x * _movementSpeed, _rigidbody2D.velocity.y);
         }
         private bool IsGrounded()
         {
@@ -67,11 +50,11 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
         }
         private void FlipUpdate()
         {
-            if (_movementAxis.x > 0 && !_isFacingRight)
+            if (_playerInput.MovementAxis.x > 0 && !_isFacingRight)
             {
                 Flip();
             }
-            else if (_movementAxis.x < 0 && _isFacingRight)
+            else if (_playerInput.MovementAxis.x < 0 && _isFacingRight)
             {
                 Flip();
             }
@@ -85,7 +68,8 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
         }
         private void Flip()
         {
-            _spriteRenderer.flipX = !_spriteRenderer.flipX;
+            transform.Rotate(0f, 180f, 0f);
+            
             _isFacingRight = !_isFacingRight;
         }
     }
