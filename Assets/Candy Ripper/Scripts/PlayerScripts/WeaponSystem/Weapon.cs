@@ -7,7 +7,6 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
     public class Weapon : MonoBehaviour
     {
         [Header("Weapon References")] 
-        [SerializeField] private Transform _bulletsParent;
         [SerializeField] private GameObject _bulletPrefab;
         [SerializeField] private Transform[] _accurateBulletsBarrels;
         [SerializeField] private Transform[] _notAccurateBulletsBarrels;
@@ -79,14 +78,7 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
         {
             if (_bullets > 0 && !_isReloading)
             {
-                if (_playerInput.IsMoving)
-                {
-                    CreateABullet(_notAccurateBulletsBarrels);
-                }
-                else
-                {
-                    CreateABullet(_accurateBulletsBarrels);
-                }
+                CreateABullet(_playerInput.IsMoving ? _notAccurateBulletsBarrels : _accurateBulletsBarrels);
             }
             else
             {
@@ -99,16 +91,9 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
         private void CreateABullet(Transform[] barrels)
         {
             Transform indexTransform;
-            if (barrels.Length == 1)
-            {
-                indexTransform = barrels[0];
-            }
-            else
-            {
-                indexTransform = barrels[UnityEngine.Random.Range(0, barrels.Length)];
-            }
+            indexTransform = barrels.Length == 1 ? barrels[0] : barrels[UnityEngine.Random.Range(0, barrels.Length)];
 
-            Instantiate(_bulletPrefab, new Vector2(indexTransform.position.x, barrels[0].position.y), indexTransform.transform.rotation, _bulletsParent);
+            Instantiate(_bulletPrefab, new Vector2(indexTransform.position.x, barrels[0].position.y), indexTransform.transform.rotation);
             _bullets -= 1;
             _playerUIAttributes.UpdateAmmoAttribute(_bullets, _maximumBullets);
         }

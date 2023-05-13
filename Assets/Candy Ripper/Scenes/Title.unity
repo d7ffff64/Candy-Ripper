@@ -819,7 +819,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1255669344}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8328840334024890602}
+        m_TargetAssemblyTypeName: Assets.CandyRipper.Scripts.SceneLoader, Assembly-CSharp
+        m_MethodName: LoadMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1255669344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -870,7 +882,7 @@ GameObject:
   - component: {fileID: 1287153370}
   - component: {fileID: 1287153369}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -909,7 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.22543609, g: 0.27919328, b: 0.3207547, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1116,3 +1128,71 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1001 &8328840334024890601
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 967698591781906896, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_Name
+      value: SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095125586520373121, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+--- !u!114 &8328840334024890602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2779349580051732060, guid: 87a1413b9a9d35945ac5bb4c05ae24a0, type: 3}
+  m_PrefabInstance: {fileID: 8328840334024890601}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e42388f16902ab4eaac918c54e5db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
