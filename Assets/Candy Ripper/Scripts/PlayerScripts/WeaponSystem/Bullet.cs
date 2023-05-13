@@ -1,4 +1,4 @@
-﻿using Assets.CandyRipper.Scripts.Abstract;
+﻿using Assets.CandyRipper.Scripts.EnemyScripts.Abstract;
 using UnityEngine;
 
 namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
@@ -26,12 +26,12 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
         {
             if (collision != null)
             {
-                if (collision.tag == "Enemy")
+                if (collision.CompareTag("Enemy"))
                 {
-                    var damageable = collision.GetComponent<IDamageable>();
-                    if (damageable != null)
+                    var enemy = collision.GetComponent<IEnemy>();
+                    if (enemy != null)
                     {
-                        damageable.TakeDamage(_weapon.DamagePower);
+                        enemy.TakeDamage(_weapon.DamagePower);
                         Destroy(gameObject, _destroyTimeOnHit);
                     }
                 }
