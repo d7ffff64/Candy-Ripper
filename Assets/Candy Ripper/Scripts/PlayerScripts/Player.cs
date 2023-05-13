@@ -1,7 +1,7 @@
-﻿using Assets.CandyRipper.Scripts.Abstract;
+﻿using Candy_Ripper.Scripts.Abstract;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.PlayerScripts
+namespace Candy_Ripper.Scripts.PlayerScripts
 {
     [RequireComponent(typeof(PlayerUIAttributes))]
     public class Player : Character

@@ -1,8 +1,8 @@
 ﻿using System.Collections;
-using Assets.CandyRipper.Scripts.PlayerScripts.Control;
+using Candy_Ripper.Scripts.PlayerScripts.Control;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
+namespace Candy_Ripper.Scripts.PlayerScripts.WeaponSystem
 {
     public class Weapon : MonoBehaviour
     {

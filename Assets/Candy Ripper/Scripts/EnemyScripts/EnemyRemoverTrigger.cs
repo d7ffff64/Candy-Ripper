@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.EnemyScripts
+namespace Candy_Ripper.Scripts.EnemyScripts
 {
     public class EnemyRemoverTrigger : MonoBehaviour
     {

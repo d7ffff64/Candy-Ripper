@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Assets.CandyRipper.Scripts
+namespace Candy_Ripper.Scripts
 {
     public class SceneLoader : MonoBehaviour
     {

@@ -1,7 +1,7 @@
-using Assets.CandyRipper.Scripts.PlayerScripts;
+using Candy_Ripper.Scripts.PlayerScripts;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.Abstract
+namespace Candy_Ripper.Scripts.Abstract
 {
     public abstract class Character : MonoBehaviour
     {

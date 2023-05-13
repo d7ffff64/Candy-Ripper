@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Assets.CandyRipper.Scripts.EnemyScripts.Abstract;
+using Candy_Ripper.Scripts.EnemyScripts.Abstract;
 using UnityEngine;
 
 public class EnemyMoveCertainDirection : MonoBehaviour, IEnemyMove

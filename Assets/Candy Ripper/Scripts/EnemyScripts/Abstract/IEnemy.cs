@@ -1,4 +1,4 @@
-﻿namespace Assets.CandyRipper.Scripts.EnemyScripts.Abstract
+﻿namespace Candy_Ripper.Scripts.EnemyScripts.Abstract
 {
     public interface IEnemy
     {

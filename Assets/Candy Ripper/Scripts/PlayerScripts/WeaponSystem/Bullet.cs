@@ -1,7 +1,7 @@
-﻿using Assets.CandyRipper.Scripts.EnemyScripts.Abstract;
+﻿using Candy_Ripper.Scripts.EnemyScripts.Abstract;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
+namespace Candy_Ripper.Scripts.PlayerScripts.WeaponSystem
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class Bullet : MonoBehaviour
@@ -16,7 +16,7 @@ namespace Assets.CandyRipper.Scripts.PlayerScripts.WeaponSystem
 
         private void Awake()
         {
-            _weapon = GameObject.Find("Player").GetComponentInChildren<Weapon>();
+            _weapon = GameObject.FindObjectOfType<Player>().GetComponentInChildren<Weapon>();
             _rigidBody2D = GetComponent<Rigidbody2D>();
 
             _rigidBody2D.velocity = transform.right * _movementSpeed;

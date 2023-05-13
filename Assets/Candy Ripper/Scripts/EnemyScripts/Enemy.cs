@@ -1,7 +1,7 @@
-﻿using Assets.CandyRipper.Scripts.Abstract;
-using Assets.CandyRipper.Scripts.EnemyScripts.Abstract;
+﻿using Candy_Ripper.Scripts.Abstract;
+using Candy_Ripper.Scripts.EnemyScripts.Abstract;
 
-namespace Assets.CandyRipper.Scripts.EnemyScripts
+namespace Candy_Ripper.Scripts.EnemyScripts
 {
     public class Enemy : Character, IEnemy
     {

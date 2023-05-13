@@ -2,7 +2,7 @@
 using Assets.CandyRipper.NewInputSystem;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
+namespace Candy_Ripper.Scripts.PlayerScripts.Control
 {
     public class PlayerInput : MonoBehaviour
     {

@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.PlayerScripts
+namespace Candy_Ripper.Scripts.PlayerScripts
 {
     public class PlayerUIAttributes : MonoBehaviour
     {

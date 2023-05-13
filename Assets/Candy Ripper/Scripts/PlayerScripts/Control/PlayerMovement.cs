@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Assets.CandyRipper.Scripts.PlayerScripts.Control
+namespace Candy_Ripper.Scripts.PlayerScripts.Control
 {
     [RequireComponent(typeof(PlayerInput), typeof(Rigidbody2D))]
     public class PlayerMovement : MonoBehaviour
