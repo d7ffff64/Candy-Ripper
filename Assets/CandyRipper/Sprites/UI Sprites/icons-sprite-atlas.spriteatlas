@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: icons-sprite-atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: a8ae0386b83864b449aca31c423d289f, type: 3}
+    - {fileID: 2800000, guid: f9b67df6e3bad6849a00c4ba284682df, type: 3}
+    - {fileID: 2800000, guid: 4969dc1316cf05d40a0026ff6cdce4bf, type: 3}
+    - {fileID: 2800000, guid: f329349fe28a0c94b9c47d2c64f8af5d, type: 3}
+    - {fileID: 2800000, guid: 792585209b33da043af5e220d9c2478f, type: 3}
+    - {fileID: 2800000, guid: cd2929ed4aaff304e8f4651da6c7664f, type: 3}
+    - {fileID: 2800000, guid: fe6357617f71b6e4da862929df2867a6, type: 3}
+    - {fileID: 2800000, guid: bf88fee6b6d53da4783ec5280778f502, type: 3}
+    - {fileID: 2800000, guid: e86c8576bc3c04943bda0c951fd216b1, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 792585209b33da043af5e220d9c2478f, type: 3}
+  - {fileID: 21300000, guid: fe6357617f71b6e4da862929df2867a6, type: 3}
+  - {fileID: 21300000, guid: 4969dc1316cf05d40a0026ff6cdce4bf, type: 3}
+  - {fileID: 21300000, guid: e86c8576bc3c04943bda0c951fd216b1, type: 3}
+  - {fileID: 21300000, guid: a8ae0386b83864b449aca31c423d289f, type: 3}
+  - {fileID: 21300000, guid: bf88fee6b6d53da4783ec5280778f502, type: 3}
+  - {fileID: 21300000, guid: f9b67df6e3bad6849a00c4ba284682df, type: 3}
+  - {fileID: 21300000, guid: cd2929ed4aaff304e8f4651da6c7664f, type: 3}
+  - {fileID: 21300000, guid: f329349fe28a0c94b9c47d2c64f8af5d, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - icons-heart
+  - icons-shield
+  - icons-arrow-right
+  - icons-pause
+  - icons-ammo
+  - icons-shot
+  - icons-arrow-left
+  - icons-reload
+  - icons-arrow-up
+  m_RenderDataMap: {}
+  m_Tag: icons-sprite-atlas
+  m_IsVariant: 0

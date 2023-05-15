@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Candy Ripper/Scenes/Title.unity
+    path: Assets/CandyRipper/Scenes/Title.unity
     guid: 99776126772480540ad9dec7a65cc3eb
   - enabled: 1
-    path: Assets/Candy Ripper/Scenes/MainMenu.unity
+    path: Assets/CandyRipper/Scenes/MainMenu.unity
     guid: c3a14a96d67d8ed4c9345e915e93001c
   - enabled: 1
-    path: Assets/Candy Ripper/Scenes/MapSelect.unity
+    path: Assets/CandyRipper/Scenes/MapSelect.unity
     guid: d94f4afa23d96df4db7f2bf63d3504d6
   - enabled: 1
-    path: Assets/Candy Ripper/Scenes/PlayerSelect.unity
+    path: Assets/CandyRipper/Scenes/PlayerSelect.unity
     guid: 285279e95b8f5cc448269066866468d8
   - enabled: 1
-    path: Assets/Candy Ripper/Scenes/Levels/Level_0.unity
+    path: Assets/CandyRipper/Scenes/Levels/Level_0.unity
     guid: f20c1b42ddf7b4142bfb0c08b6dd22c3
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: cf600e1c30b6c014f9f453c5558ce280, type: 2}
