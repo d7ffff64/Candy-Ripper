@@ -16,7 +16,7 @@ TagManager:
   - Barrier
   - Player
   - Enemy
-  - 
+  - Items/Bonus, Sweetness
   - 
   - 
   - 
@@ -41,4 +41,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 4006165075
+    locked: 0
+  - name: Weapon
+    uniqueID: 2848163805
+    locked: 0
+  - name: Bullet
+    uniqueID: 1492757363
+    locked: 0
+  - name: Ground
+    uniqueID: 1561252727
+    locked: 0
+  - name: Sweetness
+    uniqueID: 2841256855
     locked: 0

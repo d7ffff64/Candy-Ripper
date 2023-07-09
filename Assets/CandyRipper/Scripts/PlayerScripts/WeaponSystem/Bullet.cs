@@ -16,7 +16,7 @@ namespace CandyRipper.Scripts.PlayerScripts.WeaponSystem
 
         private void Awake()
         {
-            _weapon = GameObject.FindObjectOfType<Player>().GetComponentInChildren<Weapon>();
+            _weapon = FindObjectOfType<Player>().GetComponentInChildren<Weapon>();
             _rigidBody2D = GetComponent<Rigidbody2D>();
 
             _rigidBody2D.velocity = transform.right * _movementSpeed;

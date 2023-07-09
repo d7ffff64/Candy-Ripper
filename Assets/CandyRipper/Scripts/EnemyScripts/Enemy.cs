@@ -5,13 +5,18 @@ namespace CandyRipper.Scripts.EnemyScripts
 {
     public class Enemy : Character, IEnemy
     {
+        private EnemyItemDropper _enemyItemDropper;
         private void Awake()
         {
             InitializeValues();
+
+            _enemyItemDropper = GetComponent<EnemyItemDropper>();
         }
         protected override void Die()
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+
+            _enemyItemDropper.SpawnRandomAmountOfSweetness();
         }
     }
 }

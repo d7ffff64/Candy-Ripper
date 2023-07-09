@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CandyRipper.Scripts.PlayerScripts
 {
-    public class PlayerUIAttributes : MonoBehaviour
+    public sealed class PlayerUIAttributes : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private TextMeshProUGUI _healthTMP;

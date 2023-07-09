@@ -2,7 +2,7 @@ using CandyRipper.Scripts.EnemyScripts.Abstract;
 
 namespace CandyRipper.Scripts.EnemyScripts.Spawners
 {
-    public class LowLevelEnemySpawner : EnemySpawner
+    public sealed class LowLevelEnemySpawner : EnemySpawner
     {
         public static LowLevelEnemySpawner Instance { get; private set; }
         private void Awake()
@@ -14,7 +14,7 @@ namespace CandyRipper.Scripts.EnemyScripts.Spawners
                 StartCoroutine(SpawnRandom(_enemies, _spawnPoints, _spawnCount, _startTimeToSpawn, _waitingTimeBetween));
             }
         }
-        protected void InitializeSingleton()
+        private void InitializeSingleton()
         {
             if (Instance == null)
             {

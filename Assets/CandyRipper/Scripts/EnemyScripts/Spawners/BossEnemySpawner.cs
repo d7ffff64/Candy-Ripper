@@ -1,8 +1,9 @@
 using CandyRipper.Scripts.EnemyScripts.Abstract;
+using CandyRipper.Scripts.PlayerScripts;
 
 namespace CandyRipper.Scripts.EnemyScripts.Spawners
 {
-    public class BossEnemySpawner : EnemySpawner
+    public sealed class BossEnemySpawner : EnemySpawner
     {
         public static BossEnemySpawner Instance { get; private set; }
         private void Awake()
@@ -14,7 +15,7 @@ namespace CandyRipper.Scripts.EnemyScripts.Spawners
                 StartCoroutine(SpawnRandom(_enemies, _spawnPoints, _spawnCount, _startTimeToSpawn, _waitingTimeBetween));
             }
         }
-        protected void InitializeSingleton()
+        private void InitializeSingleton()
         {
             if (Instance == null)
             {

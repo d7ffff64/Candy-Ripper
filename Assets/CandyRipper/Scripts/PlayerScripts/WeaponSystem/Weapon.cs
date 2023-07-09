@@ -35,7 +35,7 @@ namespace CandyRipper.Scripts.PlayerScripts.WeaponSystem
         private void Awake()
         {
             _playerInput = GetComponentInParent<PlayerInput>();
-            _playerUIAttributes = GetComponentInParent<PlayerUIAttributes>();
+            _playerUIAttributes = FindObjectOfType<PlayerUIAttributes>().GetComponent<PlayerUIAttributes>();;
 
             _bullets = _maximumBullets;
             _playerUIAttributes.UpdateAmmoAttribute(_bullets, _maximumBullets);

@@ -28,17 +28,17 @@ namespace CandyRipper.Scripts.EnemyScripts.Abstract
         }
         protected bool CheckSpawnPoints()
         {
-            if (_spawnPoints == null)
-            {
-                return false;
-            }
-            return true;
+            return _spawnPoints != null;
         }
         private void SpawnRandomPoint(Enemy[] enemys, Transform[] spawnPoints)
         {
             Instantiate(enemys[Random.Range(0, enemys.Length)],
                 new Vector2(spawnPoints[Random.Range(0, spawnPoints.Length)].position.x, 0),
                 Quaternion.identity);
+        }
+        private void SpawnWithPoint(Enemy enemy, Transform spawnPoint)
+        {
+            Instantiate(enemy,new Vector2(spawnPoint.position.x, 0),Quaternion.identity);
         }
     }
 }

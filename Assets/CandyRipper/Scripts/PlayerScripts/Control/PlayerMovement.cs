@@ -43,7 +43,7 @@ namespace CandyRipper.Scripts.PlayerScripts.Control
         {
             _rigidbody2D.velocity = new Vector2(_playerInput.MovementAxis.x * _movementSpeed, _rigidbody2D.velocity.y);
         }
-        private bool IsGrounded()
+        public bool IsGrounded()
         {
             return Physics2D.OverlapCircle(_groundCheck.position, 0.2f, _groundLayerMask);
         }

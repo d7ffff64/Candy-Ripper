@@ -3,14 +3,13 @@ using UnityEngine;
 
 namespace CandyRipper.Scripts.PlayerScripts
 {
-    [RequireComponent(typeof(PlayerUIAttributes))]
     public class Player : Character
     {
         private PlayerUIAttributes _playerUIAttributes;
 
         private void Awake()
         {
-            _playerUIAttributes = GetComponent<PlayerUIAttributes>();
+            _playerUIAttributes = FindObjectOfType<PlayerUIAttributes>().GetComponent<PlayerUIAttributes>();
             
             InitializeValues();
             UpdateAttributes(_playerUIAttributes);
